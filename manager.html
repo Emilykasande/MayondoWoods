@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manager's Records</title>
+    <link rel="stylesheet" href="bootstrap-5.3.7-dist/css/bootstrap.css" />
+    <style>
+        body {
+            background-image: url('images/woods.avif');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            /* padding: 20px; */
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .card-title {
+            background-color: #0d6efd;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="text"],
+        input[type="number"],
+        textarea {
+            width: 100%;
+            border: none;
+            background-color: #f1f1f1;
+            padding: 5px;
+            border-radius: 4px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ✅ Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow mb-4">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">Mayondo Wood & Furniture Ltd</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto d-flex flex-row gap-2">
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-light btn-sm" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-light btn-sm" href="Sales.html">Sales</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-light btn-sm" href="manager.html">Manager</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-light btn-sm" href="Eforms.html">Eforms</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h1>Manager's Records</h1>
+
+    <div class="container">
+        <div class="row g-4">
+
+            <!-- Supplier's Page -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Supplier's Page</h5>
+                        <form>
+                            <table class="table table-bordered">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Item</th>
+                                        <th>Input</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>1</th>
+                                        <td>Supplier's Name</td>
+                                        <td><input type="text" name="supplier_name"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>2</th>
+                                        <td>Product Quality</td>
+                                        <td><input type="text" name="product_quality"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>3</th>
+                                        <td>Measurements</td>
+                                        <td><input type="text" name="measurements"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>4</th>
+                                        <td>Product Quantity</td>
+                                        <td><input type="number" name="product_quantity"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>5</th>
+                                        <td>Total Cost</td>
+                                        <td><input type="text" name="total_cost"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="card-text">
+                                Confirm & sign:<br>
+                                Supplier Signature: <input type="text" name="supplier_signature"><br>
+                                Manager Signature: <input type="text" name="manager_signature"><br>
+                                Date: <input type="text" name="date">
+                            </p>
+                            <button type="submit" class="btn btn-primary mb-3">Submit</button>
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stock Taking Page -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Stock Taking Page</h5>
+                        <form>
+                            <table class="table table-bordered">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Item</th>
+                                        <th>Input</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>1</th>
+                                        <td>Supplied</td>
+                                        <td><input type="number" name="supplied"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>2</th>
+                                        <td>Sold</td>
+                                        <td><input type="number" name="sold"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>3</th>
+                                        <td>Remaining</td>
+                                        <td><input type="number" name="remaining"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="card-text">
+                                Note products to purchase/out of stock:<br>
+                                <textarea name="notes" rows="3"></textarea><br><br>
+                                Manager Signature: <input type="text" name="manager_signature"><br>
+                                Date: <input type="text" name="date">
+                            </p>
+                            <button type="submit" class="btn btn-primary mb-3">Submit</button>
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

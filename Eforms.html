@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employees Registration Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            min-height: 100vh;
+            background-image: url('images/woods.avif');
+        }
+
+        .navbar {
+            justify-content: center;
+        }
+
+        .navbar-brand,
+        .nav-link {
+            margin: 0 15px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 30px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ✅ Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow mb-4">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">Mayondo Wood & Furniture Ltd</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto d-flex flex-row gap-2">
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-light btn-sm" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-light btn-sm" href="Sales.html">Sales</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-light btn-sm" href="manager.html">Manager</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-light btn-sm"
+                            href="bootstrap-5.3.7-dist/css/Eforms.html">Eforms</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- ✅ Registration Form -->
+    <form>
+        <div class="mb-3">
+            <label for="customerName" class="form-label">Customer's Name</label>
+            <input type="text" class="form-control" id="customerName" required />
+            <div class="form-text">Required</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="productType" class="form-label">Product Type</label>
+            <input type="text" class="form-control" id="productType" />
+        </div>
+
+        <div class="mb-3">
+            <label for="productName" class="form-label">Product Name</label>
+            <input type="text" class="form-control" id="productName" />
+        </div>
+
+        <div class="mb-3">
+            <label for="quantity" class="form-label">Quantity Bought/Sold</label>
+            <input type="number" class="form-control" id="quantity" />
+        </div>
+
+        <div class="mb-3">
+            <label for="paymentType" class="form-label">Payment Type</label>
+            <input type="text" class="form-control" id="paymentType" placeholder="cash / cheque / card" />
+        </div>
+
+        <div class="mb-3">
+            <label for="amount" class="form-label">Amount</label>
+            <input type="number" class="form-control" id="amount" placeholder="Enter amount" />
+        </div>
+
+        <div class="mb-3">
+            <label for="agentName" class="form-label">Sales Agent Name</label>
+            <input type="text" class="form-control" id="agentName" />
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">Submit</button>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

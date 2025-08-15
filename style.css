@@ -1,0 +1,13 @@
+form{
+    width: 600px;
+    margin: 20px auto;
+    padding: 25px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-image: url('images/woods.avif');
+    background-size: cover;
+}
+nav bar{
+    text-align: center;
+    background-color: blue;
+}
