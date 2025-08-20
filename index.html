@@ -6,19 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing page</title>
     <link rel="stylesheet" href="bootstrap-5.3.7-dist/css/bootstrap.css">
+    <style>
+        .image-container {
+            position: relative;
+            display: inline-block;
+            width: 90%;
+        }
+
+        .login-btn {
+            position: absolute;
+            bottom: 20px;
+            /* push to bottom */
+            right: 20px;
+            /* push to right */
+            background-color: brown;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1rem;
+            border-radius: 30px;
+            color: white;
+        }
+
+        .login-btn:hover {
+            background-color: #8b4513;
+            /* darker brown on hover */
+        }
+    </style>
 </head>
 
-<body>
+<body class="text-center">
 
-    <!-- Landing image -->
-    <div class="text-center">
-        <img src="Images/Green and White Modern Interior Design service Instagram Post.png" class="img-fluid"
-            alt="Landing Page Image" style="width: 90%; max-height: 1000px;">
-    </div>
-
-    <!-- Login button below the image -->
-    <div class="text-center mt-4">
-        <a href="login.html" class="btn btn-primary btn-lg">Click To Login</a>
+    <!-- Landing image with button -->
+    <div class="image-container">
+        <img src="Images/White And Brown Modern Furniture Instagram Story.jpg" class="img-fluid"
+            alt="Landing Page Image" style="max-height: 1000px; width: 100%;">
+        <a href="login.html" class="btn login-btn">Click To Login</a>
     </div>
 
     <script src="bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>

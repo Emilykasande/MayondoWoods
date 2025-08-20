@@ -3,100 +3,228 @@
 
 <head>
     <meta charset="UTF-8">
+    <title>Furniture Products - Business Management</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products Page</title>
-    <link rel="stylesheet" href="bootstrap-5.3.7-dist/css/bootstrap.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #f8f9fa;
+            background-color: #f4f6f8;
+            padding: 20px;
         }
 
-        .navbar-brand {
-            font-weight: bold;
-        }
-
-        .nav-link.btn {
-            padding: 5px 10px;
-            font-size: 0.9rem;
-        }
-
-        p {
-            text-align: center;
-            font-weight: 500;
+        .card img {
+            height: 180px;
+            object-fit: cover;
         }
     </style>
 </head>
 
 <body>
-
-    <!-- ✅ Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm mb-4">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Mayondo Wood & Furniture Ltd</a>
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav ms-auto d-flex flex-row gap-3">
-                    <li class="nav-item">
-                        <a class="nav-link btn btn-outline-light btn-sm" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn btn-outline-light btn-sm" href="Eforms.html">Eforms</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn btn-outline-light btn-sm" href="Sales.html">Sales</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn btn-outline-light btn-sm" href="manager.html">Manager</a>
-                    </li>
-                    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Mayondo Furniture</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="payments.html">Payments</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="suppliers.html">Suppliers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sales.html">Sales</a></li>
+                    <li class="nav-item"><a class="nav-link" href="manager.html">Manager</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- ✅ Products Grid -->
-    <div class="container py-4">
-        <h2 class="text-center mb-4">Our Products</h2>
+    <div class="container">
+        <h2 class="mb-4 text-center">Furniture Inventory</h2>
         <div class="row g-4">
+
+            <!-- Product Card -->
             <div class="col-md-4">
-                <img src="Images/office table 2.jpg" class="img-fluid rounded shadow-sm" alt="table">
-                <p>Office</p>
+                <div class="card">
+                    <img src="images/sofa.jpg" class="card-img-top" alt="Single Sofa">
+                    <div class="card-body">
+                        <h5 class="card-title">Single sofa</h5>
+                        <p class="card-text">Category: Sitting room</p>
+                        <p class="card-text">Price: $40</p>
+                        <p class="card-text">In Stock: 12</p>
+                        <div class="d-flex justify-content-between">
+                            <button class="btn btn-sm btn-primary" onclick="editProduct('Single sofa')">Edit</button>
+                            <button class="btn btn-sm btn-danger" onclick="deleteProduct('Single sofa')">Delete</button>
+                            <button class="btn btn-sm btn-success" onclick="addToSale('Single sofa', 40)">Add to
+                                Sale</button>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <!-- Another Product -->
             <div class="col-md-4">
-                <img src="Images/office table.jpg" class="img-fluid rounded shadow-sm" alt="office table">
-                <p>Office</p>
+                <div class="card">
+                    <img src="Images/center table.jpeg" class="card-img-top" alt="Bed">
+                    <div class="card-body">
+                        <h5 class="card-title"><Center table></Center></h5>
+                        <p class="card-text">Category:Sitting room</p>
+                        <p class="card-text">Price: $400</p>
+                        <p class="card-text">In Stock: 10</p>
+                        <div class="d-flex justify-content-between">
+                            <button class="btn btn-sm btn-primary" onclick="editProduct('Bed')">Edit</button>
+                            <button class="btn btn-sm btn-danger" onclick="deleteProduct('Bed')">Delete</button>
+                            <button class="btn btn-sm btn-success" onclick="addToSale('Bed', 400)">Add to Sale</button>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <!-- Another Product -->
             <div class="col-md-4">
-                <img src="Images/bed 2.jpg" class="img-fluid rounded shadow-sm" alt="bed">
-                <p>Bedroom</p>
+                <div class="card">
+                    <img src="Images/Cupboard-1.jpg" class="card-img-top" alt="Cupboard">
+                    <div class="card-body">
+                        <h5 class="card-title">Cupboard</h5>
+                        <p class="card-text">Category: Kitchen</p>
+                        <p class="card-text">Price: $400</p>
+                        <p class="card-text">In Stock: 21</p>
+                        <div class="d-flex justify-content-between">
+                            <button class="btn btn-sm btn-primary" onclick="editProduct('Cupboard')">Edit</button>
+                            <button class="btn btn-sm btn-danger" onclick="deleteProduct('Cupboard')">Delete</button>
+                            <button class="btn btn-sm btn-success" onclick="addToSale('Cupboard', 400)">Add to
+                                Sale</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-4">
-                <img src="Images/sofa.jpg" class="img-fluid rounded shadow-sm" alt="sofa">
-                <p>Sitting Room</p>
+
+     <div class="col-md-4">
+        <div class="card">
+          <img src="Images/woods.avif" class="card-img-top" alt="Bed">
+            <div class="card-body">
+               <h5 class="card-title">Wordrobe</h5>
+               <p class="card-text">Category: Bed room</p>
+               <p class="card-text">Price: $400</p>
+               <p class="card-text">In Stock: 10</p>
+               <div class="d-flex justify-content-between">
+                   <button class="btn btn-sm btn-primary" onclick="editProduct('Bed')">Edit</button>
+                   <button class="btn btn-sm btn-danger" onclick="deleteProduct('Bed')">Delete</button>
+                   <button class="btn btn-sm btn-success" onclick="addToSale('Bed', 400)">Add to Sale</button>
+               </div>
             </div>
-            <div class="col-md-4">
-                <img src="Images/woods 2.jpg" class="img-fluid rounded shadow-sm" alt="small table">
-                <p>Sitting Room</p>
-            </div>
-            <div class="col-md-4">
-                <img src="Images/woods.avif" class="img-fluid rounded shadow-sm" alt="wood">
-                <p>Bedroom</p>
-            </div>
-            <div class="col-md-4">
-                <img src="Images/Cupboard-1.jpg" class="img-fluid rounded shadow-sm" alt="Cupboard-1">
-                <p>Kitchen</p>
-            </div>
-            <div class="col-md-4">
-                <img src="Images/dressing table.jpg" class="img-fluid rounded shadow-sm" alt="dressing table">
-                <p>Dressing Table</p>
-            </div>
-            <div class="col-md-4">
-                <img src="Images/dinning table.jpg" class="img-fluid rounded shadow-sm" alt="dining">
-                <p>Dining Table</p>
+        </div>
+     </div>
+
+    <div class="col-md-4">
+        <div class="card">
+            <img src="Images/dinning table.jpg" class="card-img-top" alt="Bed">
+            <div class="card-body">
+                <h5 class="card-title">Dining <Table></Table></h5>
+                <p class="card-text">Category: Dining room</p>
+                <p class="card-text">Price: $400</p>
+                <p class="card-text">In Stock: 18</p>
+                <div class="d-flex justify-content-between">
+                    <button class="btn btn-sm btn-primary" onclick="editProduct('Bed')">Edit</button>
+                    <button class="btn btn-sm btn-danger" onclick="deleteProduct('Bed')">Delete</button>
+                    <button class="btn btn-sm btn-success" onclick="addToSale('Bed', 400)">Add to Sale</button>
+                </div>
             </div>
         </div>
     </div>
 
-    <script src="bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+    <div class="col-md-4">
+        <div class="card">
+            <img src="Images/office table 2.jpg" class="card-img-top" alt="Bed">
+            <div class="card-body">
+                <h5 class="card-title">Office table</h5>
+                <p class="card-text">Category: Office</p>
+                <p class="card-text">Price: $400</p>
+                <p class="card-text">In Stock: 18</p>
+                <div class="d-flex justify-content-between">
+                    <button class="btn btn-sm btn-primary" onclick="editProduct('Bed')">Edit</button>
+                    <button class="btn btn-sm btn-danger" onclick="deleteProduct('Bed')">Delete</button>
+                    <button class="btn btn-sm btn-success" onclick="addToSale('Bed', 400)">Add to Sale</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card">
+            <img src="Images/bed 2.jpg" class="card-img-top" alt="Bed">
+            <div class="card-body">
+                <h5 class="card-title">Bed</h5>
+                <p class="card-text">Category: Bed room</p>
+                <p class="card-text">Price: $400</p>
+                <p class="card-text">In Stock: 18</p>
+                <div class="d-flex justify-content-between">
+                    <button class="btn btn-sm btn-primary" onclick="editProduct('Bed')">Edit</button>
+                    <button class="btn btn-sm btn-danger" onclick="deleteProduct('Bed')">Delete</button>
+                    <button class="btn btn-sm btn-success" onclick="addToSale('Bed', 400)">Add to Sale</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card">
+            <img src="Images/Mirror.jpeg" class="card-img-top" alt="Bed">
+            <div class="card-body">
+                <h5 class="card-title">Dressing Mirror</h5>
+                <p class="card-text">Category: Bed room</p>
+                <p class="card-text">Price: $400</p>
+                <p class="card-text">In Stock: 15</p>
+                <div class="d-flex justify-content-between">
+                    <button class="btn btn-sm btn-primary" onclick="editProduct('Bed')">Edit</button>
+                    <button class="btn btn-sm btn-danger" onclick="deleteProduct('Bed')">Delete</button>
+                    <button class="btn btn-sm btn-success" onclick="addToSale('Bed', 400)">Add to Sale</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card">
+            <img src="Images/Chair.jpeg" class="card-img-top" alt="Bed">
+            <div class="card-body">
+                <h5 class="card-title">Office Chair</h5>
+                <p class="card-text">Category: Office</p>
+                <p class="card-text">Price: $400</p>
+                <p class="card-text">In Stock: 9</p>
+                <div class="d-flex justify-content-between">
+                    <button class="btn btn-sm btn-primary" onclick="editProduct('Bed')">Edit</button>
+                    <button class="btn btn-sm btn-danger" onclick="deleteProduct('Bed')">Delete</button>
+                    <button class="btn btn-sm btn-success" onclick="addToSale('Bed', 400)">Add to Sale</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- </div> -->
+    </div>
+
+    <script>
+        function editProduct(name) {
+            alert('Edit feature coming soon for ' + name);
+        }
+
+        function deleteProduct(name) {
+            alert('Delete feature coming soon for ' + name);
+        }
+
+        function addToSale(name, price) {
+            // Save product info in localStorage or sessionStorage
+            sessionStorage.setItem('productName', name);
+            sessionStorage.setItem('productPrice', price);
+
+            // Redirect to payments page
+            window.location.href = 'payments.html';
+            // window.location.href='Sales.html';
+        }
+    </script>
+    <footer class="bg-dark text-light text-center py-3 mt-5">
+        <small>© 2025 Mayondo Furniture & Wood. All rights reserved.</small>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

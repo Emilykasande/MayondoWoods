@@ -51,143 +51,131 @@
 
 <body>
 
-    <!-- ✅ Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow mb-4">
-        <div class="container-fluid">
-            <a class="navbar-brand fw-bold" href="#">Mayondo Wood & Furniture Ltd</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto d-flex flex-row gap-2">
-                    <li class="nav-item">
-                        <a class="nav-link btn btn-outline-light btn-sm" href="Products.html">Products</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn btn-outline-light btn-sm" href="Sales.html">Sales</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn btn-outline-light btn-sm" href="manager.html">Manager</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn btn-outline-light btn-sm" href="Eforms.html">Eforms</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <h1>Manager's Records</h1>
-
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <div class="row g-4">
-
-            <!-- Supplier's Page -->
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Supplier's Page</h5>
-                        <form>
-                            <table class="table table-bordered">
-                                <thead class="table-light">
-                                    <tr>
-                                        <th>#</th>
-                                        <th>Item</th>
-                                        <th>Input</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th>1</th>
-                                        <td>Supplier's Name</td>
-                                        <td><input type="text" name="supplier_name"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>2</th>
-                                        <td>Product Quality</td>
-                                        <td><input type="text" name="product_quality"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>3</th>
-                                        <td>Measurements</td>
-                                        <td><input type="text" name="measurements"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>4</th>
-                                        <td>Product Quantity</td>
-                                        <td><input type="number" name="product_quantity"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>5</th>
-                                        <td>Total Cost</td>
-                                        <td><input type="text" name="total_cost"></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <p class="card-text">
-                                Confirm & sign:<br>
-                                Supplier Signature: <input type="text" name="supplier_signature"><br>
-                                Manager Signature: <input type="text" name="manager_signature"><br>
-                                Date: <input type="text" name="date">
-                            </p>
-                            <button type="submit" class="btn btn-primary mb-3">Submit</button>
-
-
-                        </form>
-                    </div>
-                </div>
+        <a class="navbar-brand" href="index.html">Mayondo Furniture</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                <li class="nav-item"><a class="nav-link active" href="suppliers.html">Suppliers</a></li>
+                <!-- <li class="nav-item"><a class="nav-link" href="eforms.html">E-Forms</a></li> -->
+                <li class="nav-item"><a class="nav-link" href="sales.html">Sales</a></li>
+                <li class="nav-item"><a class="nav-link" href="payments.html">Payments</a></li>
+                <li class="nav-item"><a class="nav-link" href="manager.html">Manager</a></li>
+                <!-- <li class="nav-item"><a class="nav-link" href="Alerts.html">Alerts</a></li> -->
+            </ul>
+        </div>
+    </div>
+</nav>
+    <h1>Manager's Records</h1>
+    
+    <div class="container mb-4">
+        <div class="row">
+            <div class="col text-end">
+                <button class="btn btn-primary">Generate Report</button>
             </div>
-
-            <!-- Stock Taking Page -->
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Stock Taking Page</h5>
-                        <form>
-                            <table class="table table-bordered">
-                                <thead class="table-light">
-                                    <tr>
-                                        <th>#</th>
-                                        <th>Item</th>
-                                        <th>Input</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th>1</th>
-                                        <td>Supplied</td>
-                                        <td><input type="number" name="supplied"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>2</th>
-                                        <td>Sold</td>
-                                        <td><input type="number" name="sold"></td>
-                                    </tr>
-                                    <tr>
-                                        <th>3</th>
-                                        <td>Remaining</td>
-                                        <td><input type="number" name="remaining"></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <p class="card-text">
-                                Note products to purchase/out of stock:<br>
-                                <textarea name="notes" rows="3"></textarea><br><br>
-                                Manager Signature: <input type="text" name="manager_signature"><br>
-                                Date: <input type="text" name="date">
-                            </p>
-                            <button type="submit" class="btn btn-primary mb-3">Submit</button>
-
-
-                        </form>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </div>
 
-    <script src="bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- KPI Cards -->
+<div class="container mb-4">
+    <div class="row g-3">
+        <div class="col-md-3">
+            <div class="card p-3">
+                <h5>Total Products</h5>
+                <p class="display-6">45</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card p-3">
+                <h5>Total Sales</h5>
+                <p class="display-6">UGX 105,250,000</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card p-3">
+                <h5>Total Payments</h5>
+                <p class="display-6">UGX 97,500,000</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card p-3">
+                <h5>Pending Alerts</h5>
+                <p class="display-6">5</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Recent Sales Table -->
+<div class="container mb-4">
+    <div class="card p-3">
+        <h5>Recent Sales</h5>
+        <div class="table-responsive">
+            <table class="table table-hover align-middle">
+                <thead>
+                    <tr>
+                        <th>Invoice #</th>
+                        <th>Product</th>
+                        <th>Customer</th>
+                        <th>Date</th>
+                        <th class="text-end">Amount (UGX)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>INV-1001</td>
+                        <td>Office Desk</td>
+                        <td>John K.</td>
+                        <td>2025-08-01</td>
+                        <td class="text-end">750,000</td>
+                    </tr>
+                    <tr>
+                        <td>INV-1002</td>
+                        <td>Sofa Set</td>
+                        <td>Mary N.</td>
+                        <td>2025-08-02</td>
+                        <td class="text-end">2,000,000</td>
+                    </tr>
+                    <tr>
+                        <td>INV-1003</td>
+                        <td>Wardrobe</td>
+                        <td>James L.</td>
+                        <td>2025-08-03</td>
+                        <td class="text-end">3,500,000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Alerts Section -->
+<div class="container mb-5">
+    <div class="card p-3">
+        <h5>Recent Alerts</h5>
+        <ul class="list-group list-group-flush mt-2">
+            <li class="list-group-item alert-card">Low stock: Office Desks (5 left)</li>
+            <li class="list-group-item alert-card">Pending payment: Invoice INV-1005</li>
+            <li class="list-group-item alert-card">New custom order submitted</li>
+            <li class="list-group-item alert-card">Low stock: Wardrobes (2 left)</li>
+            <li class="list-group-item alert-card">Payment overdue: INV-0998</li>
+        </ul>
+    </div>
+</div>
+
+<footer class="bg-dark text-light text-center py-3">
+    <small>© 2025 Mayondo Furniture & Wood. All rights reserved.</small>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
+                                
+         
+
